@@ -15,7 +15,7 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-
+    
     this.chart = new Chart('canvas1', {
       type: 'doughnut',
       data: {
@@ -40,9 +40,12 @@ export class AppComponent {
         ]
       },
       options: {
+        animation:{
+          duration:6000
+        },
         legend: {
           display: false,
-         
+          
         },
         
         
@@ -71,18 +74,19 @@ export class AppComponent {
         textY = height / 2;
 
         ctx.beginPath();
-        ctx.arc(150,75,50,0*Math.PI,2*Math.PI);
+        ctx.arc(100,50,25,0*Math.PI,2*Math.PI);
         ctx.fillStyle = '#8AC007';
-        ctx.fill();
         ctx.lineWidth = 0;
+        ctx.fill();
         ctx.strokeStyle = '#FFFFFF';
-        ctx.stroke();
         ctx.fillStyle = 'black';
+        ctx.stroke();
         
         ctx.fillText(text, textX, textY);
         ctx.save();
         
       }
+      
     });
 
 
@@ -110,7 +114,11 @@ export class AppComponent {
         ]
       },
       options: {
+        animation: {
+          duration: 6000,
+      },
         legend: {
+          
           display: false,
          
         },
@@ -145,6 +153,9 @@ export class AppComponent {
         ]
       },
       options: {
+        animation: {
+          duration: 6000,
+      },
         legend: {
           display: false,
          
@@ -181,6 +192,121 @@ export class AppComponent {
         ]
       },
       options: {
+        animation: {
+          duration: 6000,
+      },
+        legend: {
+          display: false,
+         
+        },
+        tooltips: {
+          enabled: false,
+        }
+      }
+    });
+
+    this.chart = new Chart('canvas5', {
+      type: 'doughnut',
+      data: {
+        labels: ['', 'Regional',],
+        datasets: [
+          {
+            label:"1",
+            data: [75, 25,],
+            backgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBackgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBorderColor:['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            fill: true
+          },
+          {
+          
+            label:"2",
+            data: [40, 20,40],
+            backgroundColor: [' #ff9933', '#e0e0d1','#FFFFFF',],
+            hoverBackgroundColor: ['#ff9933', '#e0e0d1','#FFFFFF',],
+            hoverBorderColor:[' #ff9933', '#e0e0d1','#FFFFFF',],
+            fill: true
+          },
+        ]
+      },
+      options: {
+        animation: {
+          duration: 6000,
+      },
+        legend: {
+          display: false,
+         
+        },
+        tooltips: {
+          enabled: false,
+        }
+      }
+    });
+
+    this.chart = new Chart('canvas6', {
+      type: 'doughnut',
+      data: {
+        labels: ['', 'Regional',],
+        datasets: [
+          {
+            label:"1",
+            data: [75, 25,],
+            backgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBackgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBorderColor:['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            fill: true
+          },
+          {
+            label:"2",
+            data: [60, 20,5],
+            backgroundColor: ['#AAE0A3', '#62BDCB','#FFFFFF',],
+            hoverBackgroundColor: ['#AAE0A3','#62BDCB','#FFFFFF',],
+            hoverBorderColor:['#AAE0A3','#62BDCB','#FFFFFF',],
+            fill: true
+          },
+        ]
+      },
+      options: {
+        animation: {
+          duration: 6000,
+      },
+        legend: {
+          display: false,
+         
+        },
+        tooltips: {
+          enabled: false,
+        }
+      }
+    });
+
+    this.chart = new Chart('canvas7', {
+      type: 'doughnut',
+      data: {
+        labels: ['', 'Regional',],
+        datasets: [
+          {
+            label:"1",
+            data: [75, 25,],
+            backgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBackgroundColor: ['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            hoverBorderColor:['rgba(255, 0, 0, 0.1)','#FFFFFF',],
+            fill: true
+          },
+          {
+            label:"2",
+            data: [25, 25,50],
+            backgroundColor: [' #ff9933', '#e0e0d1','#FFFFFF',],
+            hoverBackgroundColor: ['#ff9933', '#e0e0d1','#FFFFFF',],
+            hoverBorderColor:[' #ff9933', '#e0e0d1','#FFFFFF',],
+            fill: true
+          },
+        ]
+      },
+      options: {
+        animation: {
+          duration: 6000,
+      },
         legend: {
           display: false,
          
